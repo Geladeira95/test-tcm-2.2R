@@ -1,0 +1,514 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000 0%, #011F38 50%, #000000 100%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-X: hidden;
+    cursor: url("arrowhead.png"), default;
+}
+
+body.light-mode {
+    background: linear-gradient(to bottom, #e4ecae 0%, #045394 50%, #e4ecae 100%);
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #7e7e7e;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #004b88;
+    border-radius: 15px;
+}
+
+
+header {
+    display: flex;
+    padding-top: 3vh;
+    width: 100%;
+    color: white;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+
+.menu {
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    margin-right: 3%;
+}
+
+.div_menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 10px;
+    z-index: 1;
+    font-family: "Quicksand", sans-serif;
+
+}
+
+
+.div_menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.4s;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+.div_menu a:hover {
+    color: #f1f1f1;
+    background-color: #353535;
+    border-radius: 10px;
+}
+
+.div_menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+
+}
+
+
+.main-content {
+    padding: 16px;
+    transition: margin-left 0.5s;
+}
+
+.light-dark-mode-btn {
+    color: aliceblue;
+    margin-right: 3vh;
+}
+
+
+h1 {
+    font-family: "Nunito Sans", sans-serif;
+    color: aliceblue;
+
+
+}
+
+p,
+h2 {
+    font-family: "Quicksand", sans-serif;
+    color: aliceblue;
+}
+
+body.light-mode p {
+    color: rgb(0, 13, 24);
+}
+
+body.light-mode h1 {
+    color: rgb(0, 13, 24);
+}
+
+body.light-mode h2 {
+    color: rgb(0, 13, 24);
+}
+
+body.light-mode button {
+    color: rgb(0, 13, 24);
+}
+
+body.light-mode .light-dark-mode-btn {
+    color: rgb(0, 13, 24);
+}
+
+
+
+
+.div_header {
+    display: flex;
+    width: 40%;
+    height: 100px;
+    align-items: baseline;
+    padding-left: 3%;
+
+}
+
+.div_header2 {
+    width: 60%;
+}
+
+.div_main1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.div_main2 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    margin-top: 20vh;
+}
+
+.sub_div1 {
+    width: 50%;
+    height: 100%;
+    text-align: justify;
+    margin-left: 5vh;
+    margin-right: 10vh;
+}
+
+.sub_div2 {
+    width: 50%;
+    height: 100%;
+    margin-right: 5vh;
+    margin-left: 10vh;
+}
+
+.sub_div2 img {
+    border-radius: 10px;
+}
+
+.carousel-wrapper {
+    width: 77%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 15vh;
+
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    min-width: 180px;
+    height: 300px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 80px;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3) inset;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+    margin-top: 15vh;
+}
+
+.card:hover {
+    min-width: 180px;
+    height: 300px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 80px;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3) inset;
+    cursor: pointer;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in;
+}
+
+
+
+.prev-btn,
+.next-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.prev-btn {
+    left: 5%;
+    bottom: -50%;
+}
+
+.next-btn {
+    right: 6%;
+    bottom: -50%;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #5f5f5f;
+    transition: 0.3s;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.div_footer {
+    width: 30%;
+    padding-left: 3%;
+    text-align: justify;
+}
+
+.text_link {
+    font-family: "Quicksand", sans-serif;
+    color: #008cff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* aprtir daqui eu começei a trabalhar a responsividade*/
+
+@media screen and (max-width:1024px) {
+
+    .carousel-wrapper {
+        margin-left: 25vh;
+    
+    }
+
+    .div_main2 img {
+        width: 500px;
+        height: 250px;
+    }
+    
+
+}
+
+@media screen and (max-width:768px) {
+    .sub_div2 {
+        margin-left: 3vh;
+        margin-right: 3vh;
+        padding-top: 5vh;
+
+    }
+
+    .div_main2 img {
+        width: 350px;
+        height: 175px;
+    }
+
+    .carousel-wrapper {
+        width: 62%;
+        margin: 0 auto;
+        margin-top: 15vh;
+    
+    }
+
+
+
+    .div_footer {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .div_header {
+        width: 60%;
+        margin-bottom: 10vh;
+    }
+
+    .div_header2 {
+        width: 40%;
+    }
+
+    .div_main1 {
+        margin-bottom: 200px;
+    }
+
+    .div_main2 {
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    .sub_div1 {
+        width: 70%;
+        margin-left: 10vh;
+        text-align: justify;
+    }
+
+    .sub_div1 h3 {
+        text-align: center;
+    }
+
+    .sub_div2{
+        margin-left: 8vh;
+    }
+    .sub_div2 img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .carousel-wrapper {
+        width: 62%;
+        margin-left: 20vh;
+    
+    }
+
+    .prev-btn {
+        left: 5%;
+        bottom: -70%;
+    }
+   
+    .next-btn{
+        right: 5%;
+        bottom: -70%;
+    }
+
+    .div_footer {
+        width: 60%;
+        text-align: justify;
+    }
+
+
+}
+
+@media screen and (max-width:410px){
+    
+    .sub_div1 {
+        width: 75%;
+        margin-left: 6vh;
+        text-align: justify;
+    }
+
+    .sub_div2{
+        margin-left: 5vh;
+    }
+
+    .carousel-wrapper {
+        width: 62%;
+        margin-left:18vh;
+    
+    }
+}
+
+@media screen and (max-width:390px){
+
+    .div_header {
+        width: 70%;
+      
+    }
+
+    .div_header2 {
+        width: 30%;
+    }
+    .carousel-wrapper {
+        width: 62%;
+        margin-left:16vh;
+    
+    }
+}
+
+
+
+@media screen and (max-width:375px) {
+    .div_header {
+        width: 70%;
+    }
+
+    .div_header2 {
+        width: 30%;
+    }
+
+
+    .sub_div1 h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .sub_div1 p{
+        font-size: 16px;
+    }
+
+    .sub_div1 {
+        margin-left: 6vh;
+    }
+
+    .sub_div2 {
+        margin-left: 6vh;
+        margin-bottom: 3vh;
+    }
+
+    .sub_div2 img {
+        width: 250px;
+        height: 125px;
+    }
+
+    .carousel-wrapper {
+        margin-left: 15vh;
+    
+    }
+   
+
+    .div_footer p,
+    h3 {
+
+        font-size: 13px;
+
+    }
+}
+
+@media screen and (max-width:355px){
+    
+    .carousel-wrapper {
+        margin-left: 13vh;
+    
+    }
+}
+
+@media screen and (max-width:320px) {
+    .div_header {
+        width: 90%;
+    }
+
+    .div_header2 {
+        width: 10%;
+    }
+
+    .sub_div1 {
+        margin-left: 5vh;
+    }
+
+    .sub_div2 {
+        margin-left: 2vh;
+
+    }
+
+
+    .carousel-wrapper {
+        margin-left: 10vh;
+    
+    }
+
+
+
+}
